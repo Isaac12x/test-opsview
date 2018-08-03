@@ -32,8 +32,8 @@ class Exercise(object):
         if list(count.values())[0] is not 10:
             print("Something is wrong, all data should be the same")
         else:
-            print("All data downloaded is the same and the lenght is: {}.\
-        It took {}ms to complete".format(self.calls[0][1], ms))
+            print("All data downloaded is the same and the lenght is:",
+                  " {}.It took {}s to complete".format(self.calls[0][1], ms))
 
     def pi(self):
         # code taken from https://docs.python.org/3/library/decimal.html#recipes
@@ -61,7 +61,9 @@ class Exercise(object):
         with open('result_of_pi.txt', 'w') as f:
             f.write('{}'.format(+s))
         f.close()
-        print('Calculated pi with {}'.format(round(+s, 20)))
+        print('Displaying truncated pi to 20 decimal places: {}',
+              'Full output can be seen on result_of_pi.txt'.format(
+               round(+s, 20)))
 
 
 if __name__ == '__main__':
